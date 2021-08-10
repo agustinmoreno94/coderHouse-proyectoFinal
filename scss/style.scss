@@ -14,7 +14,7 @@ $colorAHover:rgb(32, 24, 41);
 
 
 body{
-    background-color:rgb(176, 177, 185);
+    background-color:rgb(176, 177, 185) !important;
     font-size: 1.2rem;
     line-height: 1.4em ;
     margin: 0;
@@ -47,6 +47,8 @@ body{
             justify-content: center;
             align-items: center;
             font-size: 40px;
+            line-height: 30pt;
+            text-align: center;
 
         }
 
@@ -86,22 +88,26 @@ body{
             justify-content: center;
             align-items: center;
             font-size: 29px;
+            text-align: center;
         }
 
         h2{
             font-size: 30px;
+            padding-bottom: 14px;
+
         }
 
         
         #titleList{
             font-family: 'LouisGeorgeCafeBold';
             margin-left: 20px;
+            padding-top: 15px;
         }
         
         #listFont{
             color: white;
             font-family: 'LouisGeorgeCafeBold';
-            margin-left: 20px;
+            margin-left: 35px;
             li{
                 padding-top: 10px;
             }
@@ -118,6 +124,41 @@ body{
 
 
 
+}
+
+.containerHistoria{
+    background-color:rgb(37, 37, 37);
+    display: grid;
+    gap: 10px;
+    padding-top: 75px;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(1, auto);
+    grid-template-areas: "historia historia2";
+
+    .historia{
+        color: #ffff;
+        font-family:  'Roboto', sans-serif;
+        text-align: center;
+        h1{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+     
+    }
+
+    .historia2{
+
+        color: #ffff;
+        font-family:  'Roboto', sans-serif;
+        text-align: center;
+        h1{
+            display: flex;
+            text-align: center;
+        }
+     
+    }
 }
 
 
@@ -179,15 +220,17 @@ ul.show{
     top: 65px;
 }
 
-@media screen and (max-width: 740px){
+@media screen and (max-width: 415px){
     .container{
         .articulo{
            p{
-              font-size: 100%;
+              font-size: 38px;
+              align-content: center;
             }
 
          .subtitulo{
             font-size: 100%;
+            line-height: 20pt;
          }
          .imageList{
             margin-left: 9%;
@@ -215,7 +258,10 @@ ul.show{
            }  
             h2{
                 font-size: 21px;
-               
+            }
+
+            #listFont li{
+                font-size: 16px;
             }
        }
     }
@@ -259,6 +305,109 @@ ul.show{
     .logo{
         font-size: 25px;
         padding-left: 35px;
+    }
+
+    .containerHistoria{
+        grid-template-areas: "historia"
+                              "historia2"
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 360px){
+    .container{
+        .articulo{
+           p{
+              font-size: 100%;
+              line-height: 20pt;
+            }
+
+         .subtitulo{
+            font-size: 100%;
+         }
+         .imageList{
+            margin-left: 9%;
+            width: 261px;
+         }
+         h2{
+             font-size: 20px;
+         }
+         
+        .video{
+            width: 305px; 
+            height: auto;
+            margin-left: auto;
+        }
+       }
+
+       .articulo2{
+           .subtitulo2{
+               font-size: 13px;
+               height: 378px;
+               display: flex;
+               font-family: 'LouisGeorgeCafeBold';
+               justify-content: center;
+               align-items: center;
+           }  
+            h2{
+                font-size: 21px;
+            }
+
+            #listFont li{
+                font-size: 16px;
+            }
+       }
+    }
+
+    .menu {
+        height: 65px;
+    }
+
+    .btn_menu{
+        display: inline-flex;
+    }
+
+    .menu_items{
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background-color: #414141;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+
+    .menu_items li{
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+    .menu_items li:hover{
+        background: none;
+    }
+    .menu_items li a{
+        font-size: 20px;
+        color: #ffff;
+        font-weight: bold;
+    }
+
+    .menu_items li a:hover{
+        color: $colorFonta;
+    }
+
+    .logo{
+        font-size: 25px;
+        padding-left: 35px;
+    }
+    
+
+ 
+    .containerHistoria{
+        grid-template-areas: "historia"
+                              "historia2"
     }
 
 }
@@ -305,6 +454,11 @@ ul.show{
 
     .menu_items li a{
         font-size: 16px;
+    }
+
+    .containerHistoria{
+        grid-template-areas: "historia"
+                              "historia2"
     }
 
 }
@@ -499,7 +653,7 @@ ul #colorPoint::marker{
     background: $colorHeaderArticle;
     padding: 1.5rem 0;
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 48px;
 
     p{
         color:white;

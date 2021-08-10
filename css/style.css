@@ -6,7 +6,7 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #b0b1b9;
+  background-color: #b0b1b9 !important;
   font-size: 1.2rem;
   line-height: 1.4em;
   margin: 0; }
@@ -33,7 +33,9 @@ body {
       font-family: 'LouisGeorgeCafeBold';
       justify-content: center;
       align-items: center;
-      font-size: 40px; }
+      font-size: 40px;
+      line-height: 30pt;
+      text-align: center; }
     .container .articulo .subtitulo2 {
       height: 80px;
       color: #ececec;
@@ -61,21 +63,49 @@ body {
       font-family: 'LouisGeorgeCafeBold';
       justify-content: center;
       align-items: center;
-      font-size: 29px; }
+      font-size: 29px;
+      text-align: center; }
     .container .articulo2 h2 {
-      font-size: 30px; }
+      font-size: 30px;
+      padding-bottom: 14px; }
     .container .articulo2 #titleList {
       font-family: 'LouisGeorgeCafeBold';
-      margin-left: 20px; }
+      margin-left: 20px;
+      padding-top: 15px; }
     .container .articulo2 #listFont {
       color: white;
       font-family: 'LouisGeorgeCafeBold';
-      margin-left: 20px; }
+      margin-left: 35px; }
       .container .articulo2 #listFont li {
         padding-top: 10px; }
     .container .articulo2 ul #colorPoint::marker {
       color: #e5ff00;
       font-size: 1.2em; }
+
+.containerHistoria {
+  background-color: #252525;
+  display: grid;
+  gap: 10px;
+  padding-top: 75px;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(1, auto);
+  grid-template-areas: "historia historia2"; }
+  .containerHistoria .historia {
+    color: #ffff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center; }
+    .containerHistoria .historia h1 {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center; }
+  .containerHistoria .historia2 {
+    color: #ffff;
+    font-family: 'Roboto', sans-serif;
+    text-align: center; }
+    .containerHistoria .historia2 h1 {
+      display: flex;
+      text-align: center; }
 
 .menu {
   background-color: #1b1b19;
@@ -126,11 +156,13 @@ body {
 ul.show {
   top: 65px; }
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 415px) {
   .container .articulo p {
-    font-size: 100%; }
+    font-size: 38px;
+    align-content: center; }
   .container .articulo .subtitulo {
-    font-size: 100%; }
+    font-size: 100%;
+    line-height: 20pt; }
   .container .articulo .imageList {
     margin-left: 9%;
     width: 261px; }
@@ -149,6 +181,8 @@ ul.show {
     align-items: center; }
   .container .articulo2 h2 {
     font-size: 21px; }
+  .container .articulo2 #listFont li {
+    font-size: 16px; }
   .menu {
     height: 65px; }
   .btn_menu {
@@ -175,7 +209,65 @@ ul.show {
     color: #1b1b19; }
   .logo {
     font-size: 25px;
-    padding-left: 35px; } }
+    padding-left: 35px; }
+  .containerHistoria {
+    grid-template-areas: "historia" "historia2"; } }
+
+@media screen and (max-width: 360px) {
+  .container .articulo p {
+    font-size: 100%;
+    line-height: 20pt; }
+  .container .articulo .subtitulo {
+    font-size: 100%; }
+  .container .articulo .imageList {
+    margin-left: 9%;
+    width: 261px; }
+  .container .articulo h2 {
+    font-size: 20px; }
+  .container .articulo .video {
+    width: 305px;
+    height: auto;
+    margin-left: auto; }
+  .container .articulo2 .subtitulo2 {
+    font-size: 13px;
+    height: 378px;
+    display: flex;
+    font-family: 'LouisGeorgeCafeBold';
+    justify-content: center;
+    align-items: center; }
+  .container .articulo2 h2 {
+    font-size: 21px; }
+  .container .articulo2 #listFont li {
+    font-size: 16px; }
+  .menu {
+    height: 65px; }
+  .btn_menu {
+    display: inline-flex; }
+  .menu_items {
+    position: fixed;
+    width: 100vw;
+    height: calc(100% - 65px);
+    background-color: #414141;
+    top: -100vh;
+    text-align: center;
+    transition: all .4s;
+    flex-direction: column; }
+  .menu_items li {
+    margin: 30px 0 0 0;
+    line-height: 30px; }
+  .menu_items li:hover {
+    background: none; }
+  .menu_items li a {
+    font-size: 20px;
+    color: #ffff;
+    font-weight: bold; }
+  .menu_items li a:hover {
+    color: #1b1b19; }
+  .logo {
+    font-size: 25px;
+    padding-left: 35px; }
+  .containerHistoria {
+    grid-template-areas: "historia" "historia2"; } }
 
 @media screen and (max-width: 846px) {
   .container .articulo .imageList {
@@ -197,7 +289,9 @@ ul.show {
     overflow: scroll;
     height: calc(100% - 65px); }
   .menu_items li a {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .containerHistoria {
+    grid-template-areas: "historia" "historia2"; } }
 
 #alignTitle {
   text-align: center;
@@ -333,7 +427,7 @@ ul #colorPoint::marker {
   background: #29262f;
   padding: 1.5rem 0;
   text-align: center;
-  margin-top: 10rem; }
+  margin-top: 48px; }
   .footer p {
     color: white;
     font-family: 'cod'; }
