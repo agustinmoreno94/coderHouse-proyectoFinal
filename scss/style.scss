@@ -14,11 +14,94 @@ $colorAHover:rgb(32, 24, 41);
 
 
 body{
-    background-color:rgb(176, 177, 185) !important;
+    background-image: url(../imgs/codBackground.jpg) !important;
+    background-size: 100vw 100vh;
+    background-attachment: fixed !important;
     font-size: 1.2rem;
     line-height: 1.4em ;
     margin: 0;
 
+}
+
+.containerArmas{
+    background-color:rgb(37, 37, 37);
+    display: grid;
+    gap: 10px;
+    .articuloArmasRight{
+        background-color:rgb(78, 78, 78);
+        padding-bottom: 130px;
+        p{  
+            height: 90px;
+            color:rgb(236, 236, 236);
+            padding-top: 45px;
+            padding-left: 60px;
+            margin-bottom: 0.6em;
+            display: flex;
+            font-family: 'LouisGeorgeCafeBold';
+            justify-content: left;
+            align-items: start;
+            font-size: 45px;
+
+        }
+        .detalles{
+            height: 50px;
+            color:rgb(236, 236, 236);
+            display: flex;
+            font-family: 'LouisGeorgeCafeBold';
+            justify-content: left;
+            align-items: start;
+            font-size: 25px;  
+        }
+
+        .imageList{
+            margin-left: 5%;
+            width: 1000px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    }
+
+    .articuloArmasLeft{
+        background-color:rgb(78, 78, 78);
+        padding-bottom: 130px;
+        p{  
+            height: 90px;
+            color:rgb(236, 236, 236);
+            padding-top: 45px;
+            padding-left: 60px;
+            margin-bottom: 0.6em;
+            display: flex;
+            font-family: 'LouisGeorgeCafeBold';
+            justify-content: left;
+            align-items: start;
+            font-size: 45px;
+
+        }
+        .detalles{
+            height: 50px;
+            color:rgb(236, 236, 236);
+            display: flex;
+            font-family: 'LouisGeorgeCafeBold';
+            justify-content: left;
+            align-items: start;
+            font-size: 25px;  
+        }
+
+        .imageList{
+            margin-left: 5%;
+            width: 1000px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    }
 }
 
 .container{
@@ -29,6 +112,43 @@ body{
 
     .articulo{
         background-color:rgb(78, 78, 78);
+
+        form{
+            width: 450px;
+            margin: auto;
+            background: rgba(0,0,0, 0.4);
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 7px;
+            font-family: monospace;
+                
+            input, textarea{
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 7px;
+                box-sizing: border-box;
+                font-size: 17px;
+                border:none;
+            }
+
+            textarea{
+                min-height: 100px;
+                max-height: 200px;
+                max-width: 100%;
+            }
+
+            #boton{
+                background: #31384a;
+                color: #fff;
+                padding: 20px;
+            }
+
+            #boton:hover{
+                cursor: pointer;
+            }
+        }
+
+
         p{  
             height: 90px;
             color:rgb(236, 236, 236);
@@ -220,7 +340,25 @@ ul.show{
     top: 65px;
 }
 
+
+@media screen and (max-width:414px){
+    form{
+        width: 100%;
+    }
+}
+
+
 @media screen and (max-width: 415px){
+    form{
+        width: 100%;
+    }
+    .containerArmas{
+        .articulosArmasRight{
+            p{
+                font-size: 20px;
+            }
+        }
+    }
     .container{
         .articulo{
            p{
@@ -311,6 +449,8 @@ ul.show{
         grid-template-areas: "historia"
                               "historia2"
     }
+
+   
 }
 
 
@@ -318,6 +458,9 @@ ul.show{
 
 
 @media screen and (max-width: 360px){
+    form{
+        width: 100%;
+    }
     .container{
         .articulo{
            p{
@@ -413,7 +556,10 @@ ul.show{
 }
 
 @media screen and (max-width: 846px){
-
+    
+    form{
+        width: 100%;
+    }
     .container{
         .articulo{
             .imageList{

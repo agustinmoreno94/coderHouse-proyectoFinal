@@ -6,10 +6,75 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #b0b1b9 !important;
+  background-image: url(../imgs/codBackground.jpg) !important;
+  background-size: 100vw 100vh;
+  background-attachment: fixed !important;
   font-size: 1.2rem;
   line-height: 1.4em;
   margin: 0; }
+
+.containerArmas {
+  background-color: #252525;
+  display: grid;
+  gap: 10px; }
+  .containerArmas .articuloArmasRight {
+    background-color: #4e4e4e;
+    padding-bottom: 130px; }
+    .containerArmas .articuloArmasRight p {
+      height: 90px;
+      color: #ececec;
+      padding-top: 45px;
+      padding-left: 60px;
+      margin-bottom: 0.6em;
+      display: flex;
+      font-family: 'LouisGeorgeCafeBold';
+      justify-content: left;
+      align-items: start;
+      font-size: 45px; }
+    .containerArmas .articuloArmasRight .detalles {
+      height: 50px;
+      color: #ececec;
+      display: flex;
+      font-family: 'LouisGeorgeCafeBold';
+      justify-content: left;
+      align-items: start;
+      font-size: 25px; }
+    .containerArmas .articuloArmasRight .imageList {
+      margin-left: 5%;
+      width: 1000px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .containerArmas .articuloArmasLeft {
+    background-color: #4e4e4e;
+    padding-bottom: 130px; }
+    .containerArmas .articuloArmasLeft p {
+      height: 90px;
+      color: #ececec;
+      padding-top: 45px;
+      padding-left: 60px;
+      margin-bottom: 0.6em;
+      display: flex;
+      font-family: 'LouisGeorgeCafeBold';
+      justify-content: left;
+      align-items: start;
+      font-size: 45px; }
+    .containerArmas .articuloArmasLeft .detalles {
+      height: 50px;
+      color: #ececec;
+      display: flex;
+      font-family: 'LouisGeorgeCafeBold';
+      justify-content: left;
+      align-items: start;
+      font-size: 25px; }
+    .containerArmas .articuloArmasLeft .imageList {
+      margin-left: 5%;
+      width: 1000px;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
 
 .container {
   background-color: #252525;
@@ -18,6 +83,31 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(1, 1fr)); }
   .container .articulo {
     background-color: #4e4e4e; }
+    .container .articulo form {
+      width: 450px;
+      margin: auto;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      margin-top: 20px;
+      border-radius: 7px;
+      font-family: monospace; }
+      .container .articulo form input, .container .articulo form textarea {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 7px;
+        box-sizing: border-box;
+        font-size: 17px;
+        border: none; }
+      .container .articulo form textarea {
+        min-height: 100px;
+        max-height: 200px;
+        max-width: 100%; }
+      .container .articulo form #boton {
+        background: #31384a;
+        color: #fff;
+        padding: 20px; }
+      .container .articulo form #boton:hover {
+        cursor: pointer; }
     .container .articulo p {
       height: 90px;
       color: #ececec;
@@ -156,7 +246,15 @@ body {
 ul.show {
   top: 65px; }
 
+@media screen and (max-width: 414px) {
+  form {
+    width: 100%; } }
+
 @media screen and (max-width: 415px) {
+  form {
+    width: 100%; }
+  .containerArmas .articulosArmasRight p {
+    font-size: 20px; }
   .container .articulo p {
     font-size: 38px;
     align-content: center; }
@@ -214,6 +312,8 @@ ul.show {
     grid-template-areas: "historia" "historia2"; } }
 
 @media screen and (max-width: 360px) {
+  form {
+    width: 100%; }
   .container .articulo p {
     font-size: 100%;
     line-height: 20pt; }
@@ -270,6 +370,8 @@ ul.show {
     grid-template-areas: "historia" "historia2"; } }
 
 @media screen and (max-width: 846px) {
+  form {
+    width: 100%; }
   .container .articulo .imageList {
     margin-left: 12%; }
   .container .articulo .video {
